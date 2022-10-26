@@ -22,5 +22,8 @@ def hilbert_phase(y1,y2):
     phase = np.angle(sig2_hill-sig1_hill)
     
     return phase
-
+def phase_locking_value(theta1, theta2):
+    complex_phase_diff = np.exp(np.complex(0,1)*(theta1 - theta2))
+    plv = np.abs(np.sum(complex_phase_diff))/len(theta1)
+    return plv
     
