@@ -241,16 +241,14 @@ plt.xlim(180,190)
 #%% Phase difference
 # Phase diff = angle (hilbert_ipsi - hilbert_contra)
 # NOT abs(angle(hilbert_ipsi) - angle(hilbert_contra))
-instantaneous_phase_diff_ipsi_contra = np.angle(analytic_contra-analytic_ipsi)
-plt.plot(iit,instantaneous_phase_diff_ipsi_contra)
-plt.xlim(180,190)
 
-
-#%%
 os.chdir(r'E:\Student\EAfiles\AR')
 import get_your_phase_difference as pdiff
 phase_diff = pdiff.hilbert_phase(ii_filt_ipsi,ii_filt_contra)
 plt.plot(iit,phase_diff)
 plt.xlim(180,190)
+plv = pdiff.phase_locking_value(ii_filt_ipsi,ii_filt_contra)
+print(plv)
+
 #%%
 
