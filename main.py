@@ -21,7 +21,7 @@ import os
 import neo
 import numpy as np
 import array
-from scipy.signal import firwin, lfilter, filtfilt
+from scipy.signal import firwin, lfilter, filtfilt, hilbert
 from scipy.io import loadmat
 from pylab import *
 from scipy import signal
@@ -236,6 +236,10 @@ ff,axf = plt.subplots(2,1)
 axf[0].semilogx(faxis, 10 * log10(Sxx.real))
 axf[1].semilogx(fil_faxis, 10 * log10(fil_Sxx.real))
 
+#%% Hilbert Transform to extract phase information
+analytic_signal = hilbert(ii_filt_ipsi)
+instantaneous_phase = np.angle(analytic_signal)
+plt.plot(iit, instantaneous_phase)
+plt.xlim(180,190)
+
 #%%
-
-
