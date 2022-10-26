@@ -5,12 +5,6 @@ Created on Sun Oct 23 15:20:28 2022
 @author: Anubhav
 """
 
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Oct 16 20:00:27 2022
-
-@author: Anubhav
-"""
 
 
 import matplotlib.pyplot as plt
