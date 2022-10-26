@@ -1,18 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Oct 23 15:20:28 2022
+Created on Sun Oct 26 15:20:28 2022
 
 @author: Anubhav
 """
-
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Oct 16 20:00:27 2022
-
-@author: Anubhav
-"""
-
-
 import matplotlib.pyplot as plt
 import numpy as np
 import scipy
@@ -254,4 +245,12 @@ instantaneous_phase_diff_ipsi_contra = np.angle(analytic_contra-analytic_ipsi)
 plt.plot(iit,instantaneous_phase_diff_ipsi_contra)
 plt.xlim(180,190)
 
+
 #%%
+os.chdir(r'E:\Student\EAfiles\AR')
+import get_your_phase_difference as pdiff
+phase_diff = pdiff.hilbert_phase(ii_filt_ipsi,ii_filt_contra)
+plt.plot(iit,phase_diff)
+plt.xlim(180,190)
+#%%
+
