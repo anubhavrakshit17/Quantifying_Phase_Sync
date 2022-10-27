@@ -243,7 +243,7 @@ plt.xlim(180,190)
 # NOT abs(angle(hilbert_ipsi) - angle(hilbert_contra))
 
 os.chdir(r'E:\Student\EAfiles\AR')
-import get_your_phase_difference as pdiff
+import phase_difference as pdiff
 phase_diff = pdiff.hilbert_phase(ii_filt_ipsi,ii_filt_contra)
 plt.plot(iit,phase_diff)
 plt.xlim(180,190)
